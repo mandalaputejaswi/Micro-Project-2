@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Bootstrap Example</title>
+    <!-- Bootstrap CSS via CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to your custom CSS file -->
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">DAPPR</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Information</a></li>
+            <li><a href="#">More</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button class="search-btn"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="menu-icon" id="menuIcon">
+            <i class="fa fa-bars" id="barsIcon"></i>
+            <i class="fa fa-times" id="closeIcon" style="display: none;"></i>
+        </div>
+    </nav>
+
+    <script>
+        document.getElementById('menuIcon').onclick = function() {
+            var nav = document.getElementById('navLinks');
+            var barsIcon = document.getElementById('barsIcon');
+            var closeIcon = document.getElementById('closeIcon');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+                barsIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+                document.querySelector('.navbar').classList.remove('expanded');
+            } else {
+                nav.style.display = 'flex';
+                barsIcon.style.display = 'none';
+                closeIcon.style.display = 'block';
+                document.querySelector('.navbar').classList.add('expanded');
+            }
+        }
+    </script>
+
+<div class="container-fluid">
+    <div class="row space">
+      <div class="col-md-5 col-sm-12">
+        <img src="image1.png" alt="Description of image" class="image">
+      </div>
+      <div class="col-md-7 col-sm-12">
+        <div class="text-box">
+            <p class="text">
+                It's not only writers who can benefit from this free online tool. If you're a programmer who's working on a ......
+            </p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 mt-5">
+        <div class="questions  bg1">
+            <p class="question">
+                Total Question’s
+            </p>
+            <p class="answer">200,000</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 mt-5">
+        <div class="questions bg2">
+            <p class="question">
+                Total Answer’s
+            </p>
+            <p class="answer">105,000</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 mt-5">
+        <div class="questions bg3">
+            <p class="question">
+                Participated
+            </p>
+            <p class="answer">10,000</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 mt-5">
+        <div class="questions bg4">
+            <p class="question">
+                Total Passed
+            </p>
+            <p class="answer">6,000</p>
+        </div>
+      </div> 
+      <div class="col-md-4 col-sm-12 buttons">
+        <button class="b1">YOUR INFO</button>
+        <button class="b2">BOOKMARKS</button>
+        <button class="b3">SETTINGS</button>
+      </div>
+      <div class="col-md-8 col-sm-12 information">
+        <div class="info-container">
+            <h2>Your Information</h2>
+            <p class="name">Name:<span class="value"> Atul Singhal</span></p>
+            <p class="name">Email:<span class="value"> atul@gmail.com</span></p>
+            <p class="name">Phone:<span class="value"> +91 8131424888</span></p>
+            <p class="name">Marks:<span class="value"> 500.00</span></p>
+            <div class="next">
+                <button class="next-button">Next →</button>
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sticky-container">
+    <div class="scrollbar-container">  
+    <div><img src="Group 3.png"></div>
+    <div><img src="Group 4.png"></div>
+    <div><img src="Group 5.png"></div>
+    </div>
+  </div>
+
+  <img src="fixed-image.png" alt="Fixed Image" class="fixed-image">
+
+  <!-- Bootstrap JS and dependencies via CDN -->
+   
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
